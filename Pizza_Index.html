@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Pizza Order</title>
+		
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	
+	</head>
+	
+   <body>
+		<div class="container">
+			<div class="row">	<!-- capture entire page -->
+				<div class="col-sm-8">	<!-- Select Items -->
+					<div class="row">	<!-- Size and Crust -->
+							
+							<div class="col-sm-6">	<!-- Size -->
+							<div class="selectionBox">
+								<h3>Please select a size</h3>
+								<form>
+									<input class="menuItemPizza" type="radio" name="pizzaSize" value="Personal Pizza">  Personal Pizza</input>
+									<br>
+									<input class="menuItemPizza" type="radio" name="pizzaSize" value="Medium Pizza">  Medium Pizza</input>
+									<br>
+									<input class="menuItemPizza" type="radio" name="pizzaSize" value="Large Pizza" checked>  Large Pizza</input>
+									<br>
+									<input class="menuItemPizza" type="radio" name="pizzaSize" value="Extra-Large Pizza">  Extra-Large Pizza</input>
+									<br>
+									<input id="sizeUpdate" type="button" onclick="sizeCost()" value="Size Selection">
+								</form>
+							</div>
+							</div>
+							
+							<div class="col-sm-6">	<!-- Crust -->
+								<h3>Pick your crust</h3>
+								<form>
+									<input class="menuItemCrust" type="radio" name="crustType" value="Plain Crust" checked>  Plain Crust</input>
+									<br>
+									<input class="menuItemCrust" type="radio" name="crustType" value="Garlic Butter Crust">  Garlic Butter Crust</input>
+									<br>
+									<input class="menuItemCrust" type="radio" name="crustType" value="Cheese Stuffed Crust">  Cheese Stuffed Crust</input>
+									<br>
+									<input class="menuItemCrust" type="radio" name="crustType" value="Spicy Crust">  Spicy Crust</input>
+									<br>
+									<input class="menuItemCrust" type="radio" name="crustType" value="House Special Crust">  House Special Crust</input>
+									<br>
+									<input id="crustUpdate" type="button" onclick="crustCost()" value="Crust Selection">
+								</form>
+							</div>						
+					</div>
+					
+					<div class="row">	<!-- Sauce and Cheese -->
+							<div class="col-sm-6">	<!-- Sauce -->
+								<h3>Now for the sauce</h3>
+								<form>
+									<input class="menuItem" type="radio" name="sauce" value="marinara" checked>  Marinara Sauce</input>
+									<br>
+									<input class="menuItem" type="radio" name="sauce" value="white">  White Sauce</input>
+									<br>
+									<input class="menuItem" type="radio" name="sauce" value="bbq">  BBQ Sauce</input>
+									<br>
+									<input class="menuItem" type="radio" name="sauce" value="noSauce">  No Sauce</input>
+									<br>
+								</form>
+							</div>
+							<div class="col-sm-6">	<!-- Cheese -->
+								<h3>Cheese amount</h3>
+								<form>
+									<input class="menuItem" type="radio" name="cheese" value="regularCheese" checked>  Regular Amount</input>
+									<br>
+									<input class="menuItem" type="radio" name="cheese" value="noCheese">  No Cheese</input>
+									<br>                                       
+									<input class="menuItem" type="radio" name="cheese" value="extraCheese">  Extra Cheese</input>
+								</form>
+							</div>						
+					</div>
+					
+					<div class="row">	<!-- Meat and Veggies -->
+							<div class="col-sm-6">	<!-- Meat -->
+								<h3>Your choice of meats</h3>
+								<form>
+									<input class="menuItem" type="checkbox" name="meats" value="pepperoni" checked>  Pepperoni</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="meats" value="sausage">  Sausage</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="meats" value="canadianBacon">  Canadian Bacon</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="meats" value="beef">  Ground Beef</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="meats" value="anchovy">  Anchovy</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="meats" value="chicken">  Chicken</input>
+								</form>
+							</div>
+							<div class="col-sm-6">	<!-- Veggies -->
+								<h3>Finally the veggies</h3>
+								<form>
+									<input class="menuItem" type="checkbox" name="veggies" value="tomatoes" checked>  Tomatoes</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="veggies" value="onions">  Onions</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="veggies" value="olives">  Olives</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="veggies" value="grPeppers">  Green Peppers</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="veggies" value="mushrooms">  Musshrooms</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="veggies" value="pineapple">  Pineapple</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="veggies" value="spinach">  Spinach</input>
+									<br>
+									<input class="menuItem" type="checkbox" name="veggies" value="jalapeno">  Jalapeno</input>									
+								</form>
+							</div>						
+					</div>
+							
+				</div>
+				
+				<div class="col-sm-4">	<!-- Running count of selected items -->
+					<h3>Order</h3>
+					<p class="orderEntry" id="pizzaOrderSize"></p>
+					<br>
+					<p class="orderEntry" id="pizzaOrderCrust"></p>
+					<br>+</p>
+					<p>Sauce
+					<br>+</p>
+					<p>Cheese
+					<br>+</p>
+					<p>Meat Selection
+					<br>+</p>
+					<p>Veggie Selection
+					<br>+</p>
+					<h4>Total Due</h4>
+					<p>=</p>
+							
+				</div>
+			</div>	<!-- capture entire page -->
+		</div>
+  
+  
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/script.js"></script>
+   </body>
+   
+</html>
