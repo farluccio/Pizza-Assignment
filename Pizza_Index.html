@@ -17,123 +17,138 @@
 					<div class="row">	<!-- Size and Crust -->
 							
 							<div class="col-sm-6">	<!-- Size -->
-							<div class="selectionBox">
-								<h3>Please select a size</h3>
-								<form>
-									<input class="menuItemPizza" type="radio" name="pizzaSize" value="Personal Pizza">  Personal Pizza</input>
-									<br>
-									<input class="menuItemPizza" type="radio" name="pizzaSize" value="Medium Pizza">  Medium Pizza</input>
-									<br>
-									<input class="menuItemPizza" type="radio" name="pizzaSize" value="Large Pizza" checked>  Large Pizza</input>
-									<br>
-									<input class="menuItemPizza" type="radio" name="pizzaSize" value="Extra-Large Pizza">  Extra-Large Pizza</input>
-									<br>
-									<input id="sizeUpdate" type="button" onclick="sizeCost()" value="Size Selection">
-								</form>
-							</div>
+								<div class="selectionBox">
+									<h2>Please select a size</h2>
+									<form>
+										<input class="menuItemPizza" type="radio" name="pizzaSize" value="Personal Pizza">  Personal Pizza</input>
+										<br>
+										<input class="menuItemPizza" type="radio" name="pizzaSize" value="Medium Pizza">  Medium Pizza</input>
+										<br>
+										<input class="menuItemPizza" type="radio" name="pizzaSize" value="Large Pizza" checked>  Large Pizza</input>
+										<br>
+										<input class="menuItemPizza" type="radio" name="pizzaSize" value="Extra-Large Pizza">  Extra-Large Pizza</input>
+										<br>
+										<input id="sizeUpdate" type="button" onclick="sizeCost()" value="Size Selection"></input>
+									</form>
+								</div>
 							</div>
 							
 							<div class="col-sm-6">	<!-- Crust -->
-								<h3>Pick your crust</h3>
-								<form>
-									<input class="menuItemCrust" type="radio" name="crustType" value="Plain Crust" checked>  Plain Crust</input>
-									<br>
-									<input class="menuItemCrust" type="radio" name="crustType" value="Garlic Butter Crust">  Garlic Butter Crust</input>
-									<br>
-									<input class="menuItemCrust" type="radio" name="crustType" value="Cheese Stuffed Crust">  Cheese Stuffed Crust</input>
-									<br>
-									<input class="menuItemCrust" type="radio" name="crustType" value="Spicy Crust">  Spicy Crust</input>
-									<br>
-									<input class="menuItemCrust" type="radio" name="crustType" value="House Special Crust">  House Special Crust</input>
-									<br>
-									<input id="crustUpdate" type="button" onclick="crustCost()" value="Crust Selection">
-								</form>
-							</div>						
+								<div class="selectionBox">
+									<h2>Pick your crust</h2>
+									<form>
+										<input class="menuItemCrust" type="radio" name="crustType" value="Plain Crust" checked>  Plain Crust</input>
+										<br>
+										<input class="menuItemCrust" type="radio" name="crustType" value="Garlic Butter Crust">  Garlic Butter Crust</input>
+										<br>
+										<input class="menuItemCrust" type="radio" name="crustType" value="Cheese Stuffed Crust">  Cheese Stuffed Crust</input>
+										<br>
+										<input class="menuItemCrust" type="radio" name="crustType" value="Spicy Crust">  Spicy Crust</input>
+										<br>
+										<input class="menuItemCrust" type="radio" name="crustType" value="House Special Crust">  House Special Crust</input>
+										<br>
+										<input id="crustUpdate" type="button" onclick="crustCost()" value="Crust Selection"></input>
+									</form>
+								</div>	
+							</div>	
 					</div>
 					
 					<div class="row">	<!-- Sauce and Cheese -->
-							<div class="col-sm-6">	<!-- Sauce -->
-								<h3>Now for the sauce</h3>
+						<div class="col-sm-6">	<!-- Sauce -->
+							<div class="selectionBox">
+								<h2>Now for the sauce</h2>
 								<form>
-									<input class="menuItem" type="radio" name="sauce" value="marinara" checked>  Marinara Sauce</input>
+									<input class="menuItemSauce" type="radio" name="sauce" value="Marinara Sauce" checked>  Marinara Sauce</input>
 									<br>
-									<input class="menuItem" type="radio" name="sauce" value="white">  White Sauce</input>
+									<input class="menuItemSauce" type="radio" name="sauce" value="White Sauce">  White Sauce</input>
 									<br>
-									<input class="menuItem" type="radio" name="sauce" value="bbq">  BBQ Sauce</input>
+									<input class="menuItemSauce" type="radio" name="sauce" value="BBQ Sauce">  BBQ Sauce</input>
 									<br>
-									<input class="menuItem" type="radio" name="sauce" value="noSauce">  No Sauce</input>
+									<input class="menuItemSauce" type="radio" name="sauce" value="No Sauce">  No Sauce</input>
 									<br>
+									<input id="sauceUpdate" type="button" onclick="sauceSelection()" value="Sauce Selection"></input>
 								</form>
 							</div>
-							<div class="col-sm-6">	<!-- Cheese -->
-								<h3>Cheese amount</h3>
+						</div>
+						<div class="col-sm-6">	<!-- Cheese -->
+							<div class="selectionBox">
+								<h2>Cheese amount</h2>
 								<form>
-									<input class="menuItem" type="radio" name="cheese" value="regularCheese" checked>  Regular Amount</input>
+									<input class="menuItemCheese" type="radio" name="cheese" value="Regular Cheese" checked>  Regular Cheese</input>
 									<br>
-									<input class="menuItem" type="radio" name="cheese" value="noCheese">  No Cheese</input>
+									<input class="menuItemCheese" type="radio" name="cheese" value="No Cheese">  No Cheese</input>
 									<br>                                       
-									<input class="menuItem" type="radio" name="cheese" value="extraCheese">  Extra Cheese</input>
+									<input class="menuItemCheese" type="radio" name="cheese" value="Extra Cheese">  Extra Cheese</input>
+									<br>
+									<input id="cheeseUpdate" type="button" onclick="cheeseCost()" value="Cheese Selection"></input>
 								</form>
-							</div>						
+							</div>
+						</div>
+								
 					</div>
 					
 					<div class="row">	<!-- Meat and Veggies -->
 							<div class="col-sm-6">	<!-- Meat -->
-								<h3>Your choice of meats</h3>
-								<form>
-									<input class="menuItem" type="checkbox" name="meats" value="pepperoni" checked>  Pepperoni</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="meats" value="sausage">  Sausage</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="meats" value="canadianBacon">  Canadian Bacon</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="meats" value="beef">  Ground Beef</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="meats" value="anchovy">  Anchovy</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="meats" value="chicken">  Chicken</input>
-								</form>
+								<div class="selectionBox">
+									<h2>Your choice of meats</h2>
+									<form>
+										<input class="menuItemMeat" type="checkbox" name="meats" value="Pepperoni" checked>  Pepperoni</input>
+										<br>
+										<input class="menuItemMeat" type="checkbox" name="meats" value="Sausage">  Sausage</input>
+										<br>
+										<input class="menuItemMeat" type="checkbox" name="meats" value="Canadian Bacon">  Canadian Bacon</input>
+										<br>
+										<input class="menuItemMeat" type="checkbox" name="meats" value="Ground Beef">  Ground Beef</input>
+										<br>
+										<input class="menuItemMeat" type="checkbox" name="meats" value="Anchovy">  Anchovy</input>
+										<br>
+										<input class="menuItemMeat" type="checkbox" name="meats" value="Chicken">  Chicken</input>
+										<br>
+										<input id="meatUpdate" type="button" onclick="meatCost()" value="Meat Selection"></input>
+									</form>
+								</div>
 							</div>
 							<div class="col-sm-6">	<!-- Veggies -->
-								<h3>Finally the veggies</h3>
-								<form>
-									<input class="menuItem" type="checkbox" name="veggies" value="tomatoes" checked>  Tomatoes</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="veggies" value="onions">  Onions</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="veggies" value="olives">  Olives</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="veggies" value="grPeppers">  Green Peppers</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="veggies" value="mushrooms">  Musshrooms</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="veggies" value="pineapple">  Pineapple</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="veggies" value="spinach">  Spinach</input>
-									<br>
-									<input class="menuItem" type="checkbox" name="veggies" value="jalapeno">  Jalapeno</input>									
-								</form>
+								<div class="selectionBox">
+									<h2>Finally the veggies</h2>
+									<form>
+										<input class="menuItemVeggie" type="checkbox" name="veggies" value="Tomatoes" checked>  Tomatoes</input>
+										<br>
+										<input class="menuItemVeggie" type="checkbox" name="veggies" value="Onions">  Onions</input>
+										<br>
+										<input class="menuItemVeggie" type="checkbox" name="veggies" value="Olives">  Olives</input>
+										<br>
+										<input class="menuItemVeggie" type="checkbox" name="veggies" value="Green Peppers">  Green Peppers</input>
+										<br>
+										<input class="menuItemVeggie" type="checkbox" name="veggies" value="Mushrooms">  Mushrooms</input>
+										<br>
+										<input class="menuItemVeggie" type="checkbox" name="veggies" value="Pineapple">  Pineapple</input>
+										<br>
+										<input class="menuItemVeggie" type="checkbox" name="veggies" value="Spinach">  Spinach</input>
+										<br>
+										<input class="menuItemVeggie" type="checkbox" name="veggies" value="Jalapeno">  Jalapeno</input>									
+										<br>
+										<input id="meatUpdate" type="button" onclick="veggieCost()" value="Veggie Selection"></input>
+									</form>
+								</div>
 							</div>						
 					</div>
 							
 				</div>
 				
 				<div class="col-sm-4">	<!-- Running count of selected items -->
-					<h3>Order</h3>
-					<p class="orderEntry" id="pizzaOrderSize"></p>
-					<br>
-					<p class="orderEntry" id="pizzaOrderCrust"></p>
-					<br>+</p>
-					<p>Sauce
-					<br>+</p>
-					<p>Cheese
-					<br>+</p>
-					<p>Meat Selection
-					<br>+</p>
-					<p>Veggie Selection
-					<br>+</p>
-					<h4>Total Due</h4>
-					<p>=</p>
+					<div class="selectionBox">
+						<h2>Order</h2>
+						<p class="orderEntry" id="pizzaOrderSize"></p>
+						<p class="orderEntry" id="pizzaOrderCrust"></p>
+						<p class="orderEntry" id="pizzaOrderSauce"></p>
+						<p class="orderEntry" id="pizzaOrderCheese"></p>
+						<p class="orderEntry" id="pizzaOrderMeat"></p>
+						<p class="orderEntry" id="pizzaOrderVeggie"></p>
+						<input id="calculateOrder" type="button" onclick="billAmount()" value="Total Due"></input>
+						<p class="orderEntry" id="runningTotal"></p>
+						
+					</div>
 							
 				</div>
 			</div>	<!-- capture entire page -->
