@@ -1,0 +1,11 @@
+
+body {
+	background: url('../images/pizzaBackground.jpg');
+
+}
+div.selectionBox {
+	color: #813531;
+	text-shadow: 1px .5px 2px grey;
+	font-size: 1.5em;
+
+}
